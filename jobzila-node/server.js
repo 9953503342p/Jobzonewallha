@@ -109,8 +109,9 @@ const storage2 = multer.diskStorage({
 const upload2 = multer({ storage: storage2 });
 
 const corsOptions = {
-  origin: 'http://localhost:3000',  // Specify the allowed frontend origin
-  credentials: true,                // Allow credentials (cookies, headers, etc.)
+  origin: ["https://jobzonewallha-react1.onrender.com"], // Add your frontend URL
+    methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
+    credentials: true,             // Allow credentials (cookies, headers, etc.)
 };
 
 app.use(cors(corsOptions));
